@@ -8,4 +8,7 @@ target 'MonitorApp' do
   # Pods for MonitorApp
   pod 'SideMenu'
   
+  # Ono - XML Parser
+  pod 'Ono'
+  
 end

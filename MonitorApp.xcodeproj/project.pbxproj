@@ -25,6 +25,8 @@
 		72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B947225DCFCC00BB8BA2 /* Probe.swift */; };
 		72C2B94C225DD16D00BB8BA2 /* CommonMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B94B225DD16D00BB8BA2 /* CommonMonitorCell.swift */; };
 		72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */; };
+		72C2B950225DD71100BB8BA2 /* SampleProbes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B94F225DD71000BB8BA2 /* SampleProbes.xml */; };
+		72C2B952225DD76100BB8BA2 /* SampleProbesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B951225DD76100BB8BA2 /* SampleProbesData.swift */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		72C2B947225DCFCC00BB8BA2 /* Probe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probe.swift; sourceTree = "<group>"; };
 		72C2B94B225DD16D00BB8BA2 /* CommonMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMonitorCell.swift; sourceTree = "<group>"; };
 		72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonMonitorCell.xib; sourceTree = "<group>"; };
+		72C2B94F225DD71000BB8BA2 /* SampleProbes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SampleProbes.xml; sourceTree = "<group>"; };
+		72C2B951225DD76100BB8BA2 /* SampleProbesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProbesData.swift; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +188,9 @@
 		72C2B946225DCFBE00BB8BA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B94F225DD71000BB8BA2 /* SampleProbes.xml */,
 				72C2B947225DCFCC00BB8BA2 /* Probe.swift */,
+				72C2B951225DD76100BB8BA2 /* SampleProbesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				72C2B91C225C72D400BB8BA2 /* LaunchScreen.storyboard in Resources */,
 				72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
+				72C2B950225DD71100BB8BA2 /* SampleProbes.xml in Resources */,
 				72C2B917225C72D100BB8BA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,12 +331,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Ono/Ono.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ono.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +382,7 @@
 				72C2B912225C72D100BB8BA2 /* AppDelegate.swift in Sources */,
 				72C2B92B225C96D000BB8BA2 /* DisplayContext.swift in Sources */,
 				72C2B93C225D8D7500BB8BA2 /* SideMenuVC.swift in Sources */,
+				72C2B952225DD76100BB8BA2 /* SampleProbesData.swift in Sources */,
 				72C2B94C225DD16D00BB8BA2 /* CommonMonitorCell.swift in Sources */,
 				72C2B929225C96B200BB8BA2 /* Module.swift in Sources */,
 				72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */,

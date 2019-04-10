@@ -14,9 +14,7 @@ class ProbesVC: UIViewController,
 
     @IBOutlet var tableView: UITableView!
 
-    var probes: [Probe] = [Probe(name: "Probe1"),
-                           Probe(name: "Probe2"),
-                           Probe(name: "Probe3")]
+    var probes: [Probe] = []
     
     // MARK: - Object lifecycle
     static func make() -> ProbesVC {
@@ -34,6 +32,14 @@ class ProbesVC: UIViewController,
         tableView.register(UINib(nibName: "CommonMonitorCell", bundle: nil),
             forCellReuseIdentifier: CommonMonitorCell.identifier)
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SampleProbesData.shared.getSampleProbes { probes in
+            self.probes = probes
+        }
     }
     
     // MARK: - TableVIew DataSource/Delegate

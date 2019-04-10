@@ -8,10 +8,34 @@
 
 import Foundation
 
-class Probe {
+struct Probe {
+    var id: Int?
     var name: String?
+    var url: String?
+    var tags: [String]?
+    var priority: Int?
+    var fixed: Int?
+    var hascomment: Int?
+    var statusRaw: Int?
+    var active: Bool?
+    var device: [Device] = []
+    var organizations: [Organization] = []
     
-    init(name: String) {
-        self.name = name
-    }
+}
+
+struct Organization {
+    var id: Int?
+    var name: String?
+    var url: String?
+    var tags: [String]?
+    var priority: Int?
+    var fixed: Int?
+    var hascomment: Int?
+    var statusRaw: Int?
+    var active: Bool?
+    var devices: [Device] = []
+}
+
+struct Device {
+    
 }
