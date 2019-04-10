@@ -13,13 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    // MARK: - App Launching and Initializaitons
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Show RootVC
+        createRootVC(for: application)
+        
         return true
     }
 
+    // MARK: - App Lifecycle
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -43,5 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    // MARK: - RootVC Manipulation
+    func createRootVC(for application: UIApplication) {
+        let rootVC = RootVC()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+    }
 }
 

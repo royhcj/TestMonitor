@@ -16,6 +16,10 @@
 		72C2B92B225C96D000BB8BA2 /* DisplayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B92A225C96D000BB8BA2 /* DisplayContext.swift */; };
 		72C2B92E225C9FBA00BB8BA2 /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B92D225C9FBA00BB8BA2 /* RootModule.swift */; };
 		72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B92F225CA21700BB8BA2 /* RootVC.swift */; };
+		72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B936225D8D0000BB8BA2 /* ProbesVC.swift */; };
+		72C2B93C225D8D7500BB8BA2 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B93B225D8D7500BB8BA2 /* SideMenuVC.swift */; };
+		72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B93D225D8DFC00BB8BA2 /* SideMenu.storyboard */; };
+		72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B93F225D988B00BB8BA2 /* SideMenuVC+Cells.swift */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		72C2B92A225C96D000BB8BA2 /* DisplayContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayContext.swift; sourceTree = "<group>"; };
 		72C2B92D225C9FBA00BB8BA2 /* RootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
 		72C2B92F225CA21700BB8BA2 /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		72C2B936225D8D0000BB8BA2 /* ProbesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbesVC.swift; sourceTree = "<group>"; };
+		72C2B93B225D8D7500BB8BA2 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		72C2B93D225D8DFC00BB8BA2 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		72C2B93F225D988B00BB8BA2 /* SideMenuVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideMenuVC+Cells.swift"; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +108,9 @@
 		72C2B925225C92E600BB8BA2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B93A225D8D4100BB8BA2 /* SideMenu */,
+				72C2B941225DCEFC00BB8BA2 /* Alerts */,
+				72C2B934225D8CCA00BB8BA2 /* Probes */,
 				72C2B92C225C9FA700BB8BA2 /* Root */,
 			);
 			path = Modules;
@@ -129,6 +140,31 @@
 				72C2B92F225CA21700BB8BA2 /* RootVC.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		72C2B934225D8CCA00BB8BA2 /* Probes */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B936225D8D0000BB8BA2 /* ProbesVC.swift */,
+			);
+			path = Probes;
+			sourceTree = "<group>";
+		};
+		72C2B93A225D8D4100BB8BA2 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B93D225D8DFC00BB8BA2 /* SideMenu.storyboard */,
+				72C2B93B225D8D7500BB8BA2 /* SideMenuVC.swift */,
+				72C2B93F225D988B00BB8BA2 /* SideMenuVC+Cells.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		72C2B941225DCEFC00BB8BA2 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
@@ -209,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */,
 				72C2B91C225C72D400BB8BA2 /* LaunchScreen.storyboard in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
 				72C2B917225C72D100BB8BA2 /* Main.storyboard in Resources */,
@@ -245,11 +282,14 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -286,10 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
+				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
 				72C2B914225C72D100BB8BA2 /* ViewController.swift in Sources */,
 				72C2B912225C72D100BB8BA2 /* AppDelegate.swift in Sources */,
 				72C2B92B225C96D000BB8BA2 /* DisplayContext.swift in Sources */,
+				72C2B93C225D8D7500BB8BA2 /* SideMenuVC.swift in Sources */,
 				72C2B929225C96B200BB8BA2 /* Module.swift in Sources */,
+				72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */,
 				72C2B92E225C9FBA00BB8BA2 /* RootModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwacom.MonitorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,7 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwacom.MonitorApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

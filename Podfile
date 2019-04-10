@@ -6,5 +6,6 @@ target 'MonitorApp' do
   use_frameworks!
 
   # Pods for MonitorApp
-
+  pod 'SideMenu'
+  
 end
