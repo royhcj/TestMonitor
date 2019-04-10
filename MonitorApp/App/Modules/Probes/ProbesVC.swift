@@ -59,6 +59,13 @@ class ProbesVC: UIViewController,
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let probe = probes[indexPath.row]
+        
+        let vc = OrganizationsVC.make(organizations: probe.organizations)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Type Definitions
     typealias Cell = CommonMonitorCell
 

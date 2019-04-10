@@ -27,6 +27,8 @@
 		72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */; };
 		72C2B950225DD71100BB8BA2 /* SampleProbes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B94F225DD71000BB8BA2 /* SampleProbes.xml */; };
 		72C2B952225DD76100BB8BA2 /* SampleProbesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B951225DD76100BB8BA2 /* SampleProbesData.swift */; };
+		72C2B955225DF0C600BB8BA2 /* OrganizationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B954225DF0C600BB8BA2 /* OrganizationsVC.swift */; };
+		72C2B957225DF0E100BB8BA2 /* Organizations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B956225DF0E100BB8BA2 /* Organizations.storyboard */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonMonitorCell.xib; sourceTree = "<group>"; };
 		72C2B94F225DD71000BB8BA2 /* SampleProbes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SampleProbes.xml; sourceTree = "<group>"; };
 		72C2B951225DD76100BB8BA2 /* SampleProbesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProbesData.swift; sourceTree = "<group>"; };
+		72C2B954225DF0C600BB8BA2 /* OrganizationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsVC.swift; sourceTree = "<group>"; };
+		72C2B956225DF0E100BB8BA2 /* Organizations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Organizations.storyboard; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,7 @@
 				72C2B92C225C9FA700BB8BA2 /* Root */,
 				72C2B93A225D8D4100BB8BA2 /* SideMenu */,
 				72C2B934225D8CCA00BB8BA2 /* Probes */,
+				72C2B953225DF0A700BB8BA2 /* Organizations */,
 				72C2B941225DCEFC00BB8BA2 /* Alerts */,
 			);
 			path = Modules;
@@ -212,6 +217,15 @@
 			path = CommonMonitorCell;
 			sourceTree = "<group>";
 		};
+		72C2B953225DF0A700BB8BA2 /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B956225DF0E100BB8BA2 /* Organizations.storyboard */,
+				72C2B954225DF0C600BB8BA2 /* OrganizationsVC.swift */,
+			);
+			path = Organizations;
+			sourceTree = "<group>";
+		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +307,7 @@
 				72C2B945225DCF8600BB8BA2 /* Probes.storyboard in Resources */,
 				72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */,
 				72C2B91C225C72D400BB8BA2 /* LaunchScreen.storyboard in Resources */,
+				72C2B957225DF0E100BB8BA2 /* Organizations.storyboard in Resources */,
 				72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
 				72C2B950225DD71100BB8BA2 /* SampleProbes.xml in Resources */,
@@ -378,6 +393,7 @@
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
 				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
 				72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */,
+				72C2B955225DF0C600BB8BA2 /* OrganizationsVC.swift in Sources */,
 				72C2B914225C72D100BB8BA2 /* ViewController.swift in Sources */,
 				72C2B912225C72D100BB8BA2 /* AppDelegate.swift in Sources */,
 				72C2B92B225C96D000BB8BA2 /* DisplayContext.swift in Sources */,
