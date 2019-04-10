@@ -20,6 +20,11 @@
 		72C2B93C225D8D7500BB8BA2 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B93B225D8D7500BB8BA2 /* SideMenuVC.swift */; };
 		72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B93D225D8DFC00BB8BA2 /* SideMenu.storyboard */; };
 		72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B93F225D988B00BB8BA2 /* SideMenuVC+Cells.swift */; };
+		72C2B943225DCF5600BB8BA2 /* AlertsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B942225DCF5600BB8BA2 /* AlertsVC.swift */; };
+		72C2B945225DCF8600BB8BA2 /* Probes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B944225DCF8600BB8BA2 /* Probes.storyboard */; };
+		72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B947225DCFCC00BB8BA2 /* Probe.swift */; };
+		72C2B94C225DD16D00BB8BA2 /* CommonMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B94B225DD16D00BB8BA2 /* CommonMonitorCell.swift */; };
+		72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		72C2B93B225D8D7500BB8BA2 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		72C2B93D225D8DFC00BB8BA2 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		72C2B93F225D988B00BB8BA2 /* SideMenuVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideMenuVC+Cells.swift"; sourceTree = "<group>"; };
+		72C2B942225DCF5600BB8BA2 /* AlertsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsVC.swift; sourceTree = "<group>"; };
+		72C2B944225DCF8600BB8BA2 /* Probes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Probes.storyboard; sourceTree = "<group>"; };
+		72C2B947225DCFCC00BB8BA2 /* Probe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probe.swift; sourceTree = "<group>"; };
+		72C2B94B225DD16D00BB8BA2 /* CommonMonitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMonitorCell.swift; sourceTree = "<group>"; };
+		72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonMonitorCell.xib; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +98,7 @@
 		72C2B923225C921000BB8BA2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B946225DCFBE00BB8BA2 /* Model */,
 				72C2B925225C92E600BB8BA2 /* Modules */,
 				72C2B924225C923300BB8BA2 /* Main */,
 			);
@@ -108,10 +119,11 @@
 		72C2B925225C92E600BB8BA2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				72C2B93A225D8D4100BB8BA2 /* SideMenu */,
-				72C2B941225DCEFC00BB8BA2 /* Alerts */,
-				72C2B934225D8CCA00BB8BA2 /* Probes */,
+				72C2B949225DD03C00BB8BA2 /* CommonComponents */,
 				72C2B92C225C9FA700BB8BA2 /* Root */,
+				72C2B93A225D8D4100BB8BA2 /* SideMenu */,
+				72C2B934225D8CCA00BB8BA2 /* Probes */,
+				72C2B941225DCEFC00BB8BA2 /* Alerts */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -145,6 +157,7 @@
 		72C2B934225D8CCA00BB8BA2 /* Probes */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B944225DCF8600BB8BA2 /* Probes.storyboard */,
 				72C2B936225D8D0000BB8BA2 /* ProbesVC.swift */,
 			);
 			path = Probes;
@@ -163,8 +176,34 @@
 		72C2B941225DCEFC00BB8BA2 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B942225DCF5600BB8BA2 /* AlertsVC.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		72C2B946225DCFBE00BB8BA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B947225DCFCC00BB8BA2 /* Probe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72C2B949225DD03C00BB8BA2 /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B94A225DD15000BB8BA2 /* CommonMonitorCell */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		72C2B94A225DD15000BB8BA2 /* CommonMonitorCell */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B94B225DD16D00BB8BA2 /* CommonMonitorCell.swift */,
+				72C2B94D225DD17F00BB8BA2 /* CommonMonitorCell.xib */,
+			);
+			path = CommonMonitorCell;
 			sourceTree = "<group>";
 		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
@@ -245,8 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C2B945225DCF8600BB8BA2 /* Probes.storyboard in Resources */,
 				72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */,
 				72C2B91C225C72D400BB8BA2 /* LaunchScreen.storyboard in Resources */,
+				72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
 				72C2B917225C72D100BB8BA2 /* Main.storyboard in Resources */,
 			);
@@ -327,13 +368,16 @@
 			files = (
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
 				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
+				72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */,
 				72C2B914225C72D100BB8BA2 /* ViewController.swift in Sources */,
 				72C2B912225C72D100BB8BA2 /* AppDelegate.swift in Sources */,
 				72C2B92B225C96D000BB8BA2 /* DisplayContext.swift in Sources */,
 				72C2B93C225D8D7500BB8BA2 /* SideMenuVC.swift in Sources */,
+				72C2B94C225DD16D00BB8BA2 /* CommonMonitorCell.swift in Sources */,
 				72C2B929225C96B200BB8BA2 /* Module.swift in Sources */,
 				72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */,
 				72C2B92E225C9FBA00BB8BA2 /* RootModule.swift in Sources */,
+				72C2B943225DCF5600BB8BA2 /* AlertsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class RootVC: UIViewController {
     
     enum ViewType {
         case probes     // 根目錄
-        case critical   // 警報清單
+        case alerts   // 警報清單
     }
 
     // MARK: - View lifecycle
@@ -70,9 +70,9 @@ class RootVC: UIViewController {
         
         switch viewType {
         case .probes:
-            vc = ProbesVC()
-        case .critical:
-            vc = SideMenuVC()
+            vc = ProbesVC.make()
+        case .alerts:
+            vc = AlertsVC()
         }
         
         setCurrentVC(vc)
