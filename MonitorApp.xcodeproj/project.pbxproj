@@ -33,6 +33,9 @@
 		72C2B95C225EE18600BB8BA2 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B95B225EE18600BB8BA2 /* DevicesVC.swift */; };
 		72C2B95F225EE63C00BB8BA2 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */; };
 		72C2B961225EE64500BB8BA2 /* Sensors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B960225EE64500BB8BA2 /* Sensors.storyboard */; };
+		72C2B964225EE88A00BB8BA2 /* Sensor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B963225EE88A00BB8BA2 /* Sensor.storyboard */; };
+		72C2B966225EE89800BB8BA2 /* SensorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B965225EE89800BB8BA2 /* SensorVC.swift */; };
+		72C2B968225F166000BB8BA2 /* SensorVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		72C2B95B225EE18600BB8BA2 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
 		72C2B960225EE64500BB8BA2 /* Sensors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sensors.storyboard; sourceTree = "<group>"; };
+		72C2B963225EE88A00BB8BA2 /* Sensor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sensor.storyboard; sourceTree = "<group>"; };
+		72C2B965225EE89800BB8BA2 /* SensorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorVC.swift; sourceTree = "<group>"; };
+		72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorVC+Cells.swift"; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 				72C2B953225DF0A700BB8BA2 /* Organizations */,
 				72C2B958225EE16200BB8BA2 /* Devices */,
 				72C2B95D225EE62100BB8BA2 /* Sensors */,
+				72C2B962225EE87200BB8BA2 /* Sensor */,
 				72C2B941225DCEFC00BB8BA2 /* Alerts */,
 			);
 			path = Modules;
@@ -254,6 +261,16 @@
 			path = Sensors;
 			sourceTree = "<group>";
 		};
+		72C2B962225EE87200BB8BA2 /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B963225EE88A00BB8BA2 /* Sensor.storyboard */,
+				72C2B965225EE89800BB8BA2 /* SensorVC.swift */,
+				72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */,
+			);
+			path = Sensor;
+			sourceTree = "<group>";
+		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +353,7 @@
 				72C2B93E225D8DFC00BB8BA2 /* SideMenu.storyboard in Resources */,
 				72C2B91C225C72D400BB8BA2 /* LaunchScreen.storyboard in Resources */,
 				72C2B957225DF0E100BB8BA2 /* Organizations.storyboard in Resources */,
+				72C2B964225EE88A00BB8BA2 /* Sensor.storyboard in Resources */,
 				72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
 				72C2B961225EE64500BB8BA2 /* Sensors.storyboard in Resources */,
@@ -424,6 +442,8 @@
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
 				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
 				72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */,
+				72C2B968225F166000BB8BA2 /* SensorVC+Cells.swift in Sources */,
+				72C2B966225EE89800BB8BA2 /* SensorVC.swift in Sources */,
 				72C2B955225DF0C600BB8BA2 /* OrganizationsVC.swift in Sources */,
 				72C2B914225C72D100BB8BA2 /* ViewController.swift in Sources */,
 				72C2B912225C72D100BB8BA2 /* AppDelegate.swift in Sources */,

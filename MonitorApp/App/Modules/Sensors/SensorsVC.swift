@@ -58,6 +58,13 @@ class SensorsVC: UIViewController,
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sensor = sensors[indexPath.row]
+        
+        let vc = SensorVC.make(sensor: sensor)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Refresh Methods
     func refreshSensors() {
         tableView.reloadData()
