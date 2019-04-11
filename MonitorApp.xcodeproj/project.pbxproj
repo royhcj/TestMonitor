@@ -31,6 +31,8 @@
 		72C2B957225DF0E100BB8BA2 /* Organizations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B956225DF0E100BB8BA2 /* Organizations.storyboard */; };
 		72C2B95A225EE17700BB8BA2 /* Devices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B959225EE17700BB8BA2 /* Devices.storyboard */; };
 		72C2B95C225EE18600BB8BA2 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B95B225EE18600BB8BA2 /* DevicesVC.swift */; };
+		72C2B95F225EE63C00BB8BA2 /* SensorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */; };
+		72C2B961225EE64500BB8BA2 /* Sensors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B960225EE64500BB8BA2 /* Sensors.storyboard */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		72C2B956225DF0E100BB8BA2 /* Organizations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Organizations.storyboard; sourceTree = "<group>"; };
 		72C2B959225EE17700BB8BA2 /* Devices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Devices.storyboard; sourceTree = "<group>"; };
 		72C2B95B225EE18600BB8BA2 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
+		72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsVC.swift; sourceTree = "<group>"; };
+		72C2B960225EE64500BB8BA2 /* Sensors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sensors.storyboard; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,7 @@
 				72C2B934225D8CCA00BB8BA2 /* Probes */,
 				72C2B953225DF0A700BB8BA2 /* Organizations */,
 				72C2B958225EE16200BB8BA2 /* Devices */,
+				72C2B95D225EE62100BB8BA2 /* Sensors */,
 				72C2B941225DCEFC00BB8BA2 /* Alerts */,
 			);
 			path = Modules;
@@ -240,6 +245,15 @@
 			path = Devices;
 			sourceTree = "<group>";
 		};
+		72C2B95D225EE62100BB8BA2 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B960225EE64500BB8BA2 /* Sensors.storyboard */,
+				72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +338,7 @@
 				72C2B957225DF0E100BB8BA2 /* Organizations.storyboard in Resources */,
 				72C2B94E225DD17F00BB8BA2 /* CommonMonitorCell.xib in Resources */,
 				72C2B919225C72D400BB8BA2 /* Assets.xcassets in Resources */,
+				72C2B961225EE64500BB8BA2 /* Sensors.storyboard in Resources */,
 				72C2B950225DD71100BB8BA2 /* SampleProbes.xml in Resources */,
 				72C2B917225C72D100BB8BA2 /* Main.storyboard in Resources */,
 				72C2B95A225EE17700BB8BA2 /* Devices.storyboard in Resources */,
@@ -405,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C2B95F225EE63C00BB8BA2 /* SensorsVC.swift in Sources */,
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
 				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
 				72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */,

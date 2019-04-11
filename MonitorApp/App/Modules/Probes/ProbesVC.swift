@@ -32,14 +32,15 @@ class ProbesVC: UIViewController,
         tableView.register(UINib(nibName: "CommonMonitorCell", bundle: nil),
             forCellReuseIdentifier: CommonMonitorCell.identifier)
 
+        SampleProbesData.shared.getSampleProbes { probes in
+            self.probes = probes
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        SampleProbesData.shared.getSampleProbes { probes in
-            self.probes = probes
-        }
+        refreshProbes()
     }
     
     // MARK: - TableVIew DataSource/Delegate
@@ -64,6 +65,11 @@ class ProbesVC: UIViewController,
         
         let vc = OrganizationsVC.make(organizations: probe.organizations)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // MARK: - Refresh Methods
+    func refreshProbes() {
+        tableView.reloadData()
     }
     
     // MARK: - Type Definitions
