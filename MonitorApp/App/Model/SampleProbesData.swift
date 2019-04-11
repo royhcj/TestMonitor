@@ -46,7 +46,12 @@ class SampleProbesData: NSObject, XMLParserDelegate {
             probe.statusRaw = pn.firstChild(withTag: "status_raw")?.numberValue?.intValue
             probe.active    = pn.firstChild(withTag: "active")?.stringValue == "true"
             
-            //probe.devices = // TODO: later
+            let probeDevices = pn.children(withTag: "device")
+            probeDevices.forEach { dn in
+                var device = Device()
+                device.parse(element: dn)
+                probe.devices.append(device)
+            }
             
             // Organizations
             let groups = pn.children(withTag: "group")
