@@ -12,16 +12,19 @@ class SensorVC: UIViewController,
                 UITableViewDataSource,
                 UITableViewDelegate {
     
+    var ownershipInfo: OwnershipInfo?
     var sensor: Sensor?
     
     @IBOutlet var tableView: UITableView!
     
     // MARK: - Object lifecycle
-    static func make(sensor: Sensor?) -> SensorVC {
+    static func make(sensor: Sensor?,
+                     ownershipInfo: OwnershipInfo?) -> SensorVC {
         let vc = UIStoryboard(name: "Sensor", bundle: nil)
                     .instantiateViewController(withIdentifier: "SensorVC")
                     as! SensorVC
         vc.sensor = sensor
+        vc.ownershipInfo = ownershipInfo
         return vc
     }
     
@@ -52,7 +55,12 @@ class SensorVC: UIViewController,
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         if let cell = cell as? InfoCell {
+            cell.probeNameLabel.text = ownershipInfo?.ownerProbeName
+            cell.organizationNameLabel.text = ownershipInfo?.ownerOrganizationName
+            cell.deviceNameLabel.text = ownershipInfo?.ownerDeviceName
             cell.sensorNameLabel.text = sensor?.name
+            cell.statusLabel.text = sensor?.statusMessage
+            
         } else if let cell = cell as? StatusCell {
             print(cell)
         }

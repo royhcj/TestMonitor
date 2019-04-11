@@ -141,8 +141,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hostLabel" destination="vVn-AK-UQ0" id="a43-GQ-a53"/>
-                                            <outlet property="organizationLabel" destination="T5l-eO-cbu" id="fec-0P-hGF"/>
+                                            <outlet property="deviceNameLabel" destination="vVn-AK-UQ0" id="a43-GQ-a53"/>
+                                            <outlet property="organizationNameLabel" destination="T5l-eO-cbu" id="fec-0P-hGF"/>
                                             <outlet property="probeNameLabel" destination="IVL-0c-yLg" id="s1o-on-RsC"/>
                                             <outlet property="sensorIcon" destination="LaC-Bg-M8Q" id="49f-SY-Ge2"/>
                                             <outlet property="sensorNameLabel" destination="ZQc-mT-taS" id="o3m-AA-c9c"/>

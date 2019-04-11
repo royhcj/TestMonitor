@@ -13,17 +13,22 @@ class OrganizationsVC: UIViewController,
                        UITableViewDelegate {
     
     var organizations: [Organization] = []
+    var ownershipInfo: OwnershipInfo?
     
     @IBOutlet var tableView: UITableView!
     
     // MARK: - Object lifecycle
-    static func make(organizations: [Organization]?) -> OrganizationsVC {
+    static func make(organizations: [Organization]?,
+                     ownershipInfo: OwnershipInfo?) -> OrganizationsVC {
         let vc = UIStoryboard(name: "Organizations", bundle: nil)
                     .instantiateViewController(withIdentifier: "OrganizationsVC")
                     as! OrganizationsVC
+        
         if let organizations = organizations {
             vc.organizations = organizations
         }
+        vc.ownershipInfo = ownershipInfo
+        
         return vc
     }
     
@@ -59,8 +64,12 @@ class OrganizationsVC: UIViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let organization = organizations[indexPath.row]
+        var ownershipInfo = self.ownershipInfo
+        ownershipInfo?.ownerOrganizationID = organization.id
+        ownershipInfo?.ownerOrganizationName = organization.name
         
-        let vc = DevicesVC.make(devices: organization.devices)
+        let vc = DevicesVC.make(devices: organization.devices,
+                                ownershipInfo: ownershipInfo)
         navigationController?.pushViewController(vc, animated: true)
     }
     

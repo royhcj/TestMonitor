@@ -62,8 +62,11 @@ class ProbesVC: UIViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let probe = probes[indexPath.row]
+        var ownershipInfo = OwnershipInfo()
+        ownershipInfo.ownerProbeID = probe.id
+        ownershipInfo.ownerProbeName = probe.name
         
-        let vc = OrganizationsVC.make(organizations: probe.organizations)
+        let vc = OrganizationsVC.make(organizations: probe.organizations, ownershipInfo: ownershipInfo)
         navigationController?.pushViewController(vc, animated: true)
     }
     

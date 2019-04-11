@@ -11,8 +11,8 @@ import UIKit
 class SensorVCInfoCell: UITableViewCell {
     
     @IBOutlet var probeNameLabel: UILabel!
-    @IBOutlet var organizationLabel: UILabel!
-    @IBOutlet var hostLabel: UILabel!
+    @IBOutlet var organizationNameLabel: UILabel!
+    @IBOutlet var deviceNameLabel: UILabel!
     
     @IBOutlet var sensorIcon: UIImageView!
     @IBOutlet var sensorNameLabel: UILabel!

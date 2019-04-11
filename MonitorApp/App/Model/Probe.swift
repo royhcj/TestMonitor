@@ -82,6 +82,16 @@ struct Sensor {
     var active: Bool?
 }
 
+struct OwnershipInfo {
+    var ownerProbeID: Int?
+    var ownerProbeName: String?
+    var ownerOrganizationID: Int?
+    var ownerOrganizationName: String?
+    var ownerDeviceID: Int?
+    var ownerDeviceName: String?
+    var ownerDeviceHost: String?
+}
+
 
 extension Device {
     mutating func parse(element ele: ONOXMLElement) {

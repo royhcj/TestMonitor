@@ -12,18 +12,20 @@ class DevicesVC: UIViewController,
                  UITableViewDataSource,
                  UITableViewDelegate {
 
+    var ownershipInfo: OwnershipInfo?
     var devices: [Device] = []
     
     @IBOutlet var tableView: UITableView!
     
     // MARK: - Object lifecycle
-    static func make(devices: [Device]?) -> DevicesVC {
+    static func make(devices: [Device]?, ownershipInfo: OwnershipInfo?) -> DevicesVC {
         let vc = UIStoryboard(name: "Devices", bundle: nil)
                     .instantiateViewController(withIdentifier: "DevicesVC")
                     as! DevicesVC
         if let devices = devices {
             vc.devices = devices
         }
+        vc.ownershipInfo = ownershipInfo
         return vc
     }
     
@@ -59,8 +61,13 @@ class DevicesVC: UIViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let device = devices[indexPath.row]
+        var ownershipInfo = self.ownershipInfo
+        ownershipInfo?.ownerDeviceID = device.id
+        ownershipInfo?.ownerDeviceName = device.name
+        ownershipInfo?.ownerDeviceHost = device.host
         
-        let vc = SensorsVC.make(sensors: device.sensors)
+        let vc = SensorsVC.make(sensors: device.sensors,
+                                ownershipInfo: ownershipInfo)
         navigationController?.pushViewController(vc, animated: true)
     }
     

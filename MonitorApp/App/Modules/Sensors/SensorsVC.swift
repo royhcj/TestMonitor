@@ -12,19 +12,22 @@ class SensorsVC: UIViewController,
                  UITableViewDataSource,
                  UITableViewDelegate {
     
+    var ownershipInfo: OwnershipInfo?
     var sensors: [Sensor] = []
 
     @IBOutlet var tableView: UITableView!
     var sections: [SectionType] = [.info, .sensors]
     
     // MARK: - Object lifecycle
-    static func make(sensors: [Sensor]?) -> SensorsVC {
+    static func make(sensors: [Sensor]?,
+                     ownershipInfo: OwnershipInfo?) -> SensorsVC {
         let vc = UIStoryboard(name: "Sensors", bundle: nil)
                     .instantiateViewController(withIdentifier: "SensorsVC")
                     as! SensorsVC
         if let sensors = sensors {
             vc.sensors = sensors
         }
+        vc.ownershipInfo = ownershipInfo
         return vc
     }
     
@@ -60,7 +63,9 @@ class SensorsVC: UIViewController,
         
         
         if let cell = cell as? InfoCell {
-            
+            cell.probeNameLabel.text = ownershipInfo?.ownerProbeName
+            cell.organizationNameLabel.text = ownershipInfo?.ownerOrganizationName
+            cell.deviceLabel.text = ownershipInfo?.ownerDeviceName
         } else if let cell = cell as? SensorCell {
             let sensor = sensors[indexPath.row]
             
@@ -80,7 +85,7 @@ class SensorsVC: UIViewController,
         }
         let sensor = sensors[indexPath.row]
         
-        let vc = SensorVC.make(sensor: sensor)
+        let vc = SensorVC.make(sensor: sensor, ownershipInfo: ownershipInfo)
         navigationController?.pushViewController(vc, animated: true)
     }
     
