@@ -36,6 +36,7 @@
 		72C2B964225EE88A00BB8BA2 /* Sensor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C2B963225EE88A00BB8BA2 /* Sensor.storyboard */; };
 		72C2B966225EE89800BB8BA2 /* SensorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B965225EE89800BB8BA2 /* SensorVC.swift */; };
 		72C2B968225F166000BB8BA2 /* SensorVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */; };
+		72C2B96A225F2C8900BB8BA2 /* SensorsVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B969225F2C8900BB8BA2 /* SensorsVC+Cells.swift */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		72C2B963225EE88A00BB8BA2 /* Sensor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sensor.storyboard; sourceTree = "<group>"; };
 		72C2B965225EE89800BB8BA2 /* SensorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorVC.swift; sourceTree = "<group>"; };
 		72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorVC+Cells.swift"; sourceTree = "<group>"; };
+		72C2B969225F2C8900BB8BA2 /* SensorsVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorsVC+Cells.swift"; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +259,7 @@
 			children = (
 				72C2B960225EE64500BB8BA2 /* Sensors.storyboard */,
 				72C2B95E225EE63C00BB8BA2 /* SensorsVC.swift */,
+				72C2B969225F2C8900BB8BA2 /* SensorsVC+Cells.swift */,
 			);
 			path = Sensors;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			files = (
 				72C2B95F225EE63C00BB8BA2 /* SensorsVC.swift in Sources */,
 				72C2B930225CA21700BB8BA2 /* RootVC.swift in Sources */,
+				72C2B96A225F2C8900BB8BA2 /* SensorsVC+Cells.swift in Sources */,
 				72C2B937225D8D0000BB8BA2 /* ProbesVC.swift in Sources */,
 				72C2B948225DCFCC00BB8BA2 /* Probe.swift in Sources */,
 				72C2B968225F166000BB8BA2 /* SensorVC+Cells.swift in Sources */,

@@ -15,7 +15,7 @@ class SensorsVC: UIViewController,
     var sensors: [Sensor] = []
 
     @IBOutlet var tableView: UITableView!
-    
+    var sections: [SectionType] = [.info, .sensors]
     
     // MARK: - Object lifecycle
     static func make(sensors: [Sensor]?) -> SensorsVC {
@@ -31,10 +31,6 @@ class SensorsVC: UIViewController,
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register table cells
-        tableView.register(UINib(nibName: "CommonMonitorCell", bundle: nil),
-                           forCellReuseIdentifier: CommonMonitorCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,22 +39,45 @@ class SensorsVC: UIViewController,
     }
     
     // MARK: - Table DataSource/Delegate
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sensors.count
+        let section = sections[section]
+        
+        switch section {
+        case .info:     return 1
+        case .sensors:  return sensors.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CommonMonitorCell.identifier, for: indexPath)
-        let sensor = sensors[indexPath.row]
+        let section = sections[indexPath.section]
         
-        if let cell = cell as? Cell {
-            cell.titleLabel.text = sensor.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: section.cellIdentifier,
+                                                 for: indexPath)
+        
+        
+        if let cell = cell as? InfoCell {
+            
+        } else if let cell = cell as? SensorCell {
+            let sensor = sensors[indexPath.row]
+            
+            cell.sensorNameLabel.text = sensor.name
+            cell.sensorStatusLabel.text = sensor.statusMessage
+            cell.sensorLatestLabel.text = "最新數據: \(sensor.lastValue ?? "")"
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard sections[indexPath.section] == .sensors
+        else {
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
         let sensor = sensors[indexPath.row]
         
         let vc = SensorVC.make(sensor: sensor)
@@ -72,5 +91,17 @@ class SensorsVC: UIViewController,
     
     // MARK: - Type Definitions
     typealias Cell = CommonMonitorCell
+    
+    enum SectionType: Int {
+        case info
+        case sensors
+        
+        var cellIdentifier: String {
+            switch self {
+            case .info:     return "InfoCell"
+            case .sensors:  return "SensorCell"
+            }
+        }
+    }
 
 }
