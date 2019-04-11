@@ -34,29 +34,42 @@ class SampleProbesData: NSObject, XMLParserDelegate {
         let probeNodes = sensortreeNodes?.children(withTag: "probenode")
         
         probeNodes?.forEach { pn in
+            // Probe
             var probe = Probe()
             probe.id        = pn.attributes["id"] as? Int
             probe.name      = pn.firstChild(withTag: "name")?.stringValue
             probe.url       = pn.firstChild(withTag: "url")?.stringValue
-            //probe.tags // TODO: later
+            probe.tags      = pn.firstChild(withTag: "tags")?.stringValue?.split(separator: " ").map { String($0) }
             probe.priority  = pn.firstChild(withTag: "priority")?.numberValue?.intValue
             probe.fixed     = pn.firstChild(withTag: "fixed")?.numberValue?.intValue
             probe.hascomment = pn.firstChild(withTag: "hascomment")?.numberValue?.intValue
             probe.statusRaw = pn.firstChild(withTag: "status_raw")?.numberValue?.intValue
             probe.active    = pn.firstChild(withTag: "active")?.stringValue == "true"
             
+            //probe.devices = // TODO: later
+            
+            // Organizations
             let groups = pn.children(withTag: "group")
             groups.forEach { on in
                 var org = Organization()
                 org.id        = on.attributes["id"] as? Int
                 org.name      = on.firstChild(withTag: "name")?.stringValue
                 org.url       = on.firstChild(withTag: "url")?.stringValue
-                //probe.tags // TODO: later
+                org.tags      = on.firstChild(withTag: "tags")?.stringValue?.split(separator: " ").map { String($0) }
                 org.priority  = on.firstChild(withTag: "priority")?.numberValue?.intValue
                 org.fixed     = on.firstChild(withTag: "fixed")?.numberValue?.intValue
                 org.hascomment = on.firstChild(withTag: "hascomment")?.numberValue?.intValue
                 org.statusRaw = on.firstChild(withTag: "status_raw")?.numberValue?.intValue
                 org.active    = on.firstChild(withTag: "active")?.stringValue == "true"
+                
+                // Organization Devices
+                let orgDevices = on.children(withTag: "device")
+                orgDevices.forEach { odn in
+                    var device = Device()
+                    device.parse(element: odn)
+                    
+                    org.devices.append(device)
+                }
                 
                 probe.organizations.append(org)
             }
