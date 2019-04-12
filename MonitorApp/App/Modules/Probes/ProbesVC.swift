@@ -41,6 +41,22 @@ class ProbesVC: UIViewController,
         super.viewWillAppear(animated)
         
         refreshProbes()
+
+        // Try api
+        WebAPI.GetChannels(.init(id: 17698, userName: "prtgadmin", passhash: "1098748320",
+                                 content: "channels", output: "xml",
+                                 columns: "name,lastvalue_")).execute {
+            switch $0 {
+            case .success(let response):
+                if let string = String(data: response, encoding: .utf8) {
+                    print(string)
+                }
+                print("OK")
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
     }
     
     // MARK: - TableVIew DataSource/Delegate

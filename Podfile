@@ -11,4 +11,6 @@ target 'MonitorApp' do
   # Ono - XML Parser
   pod 'Ono'
   
+  pod 'IORequestable'
+  
 end

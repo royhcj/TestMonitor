@@ -37,6 +37,7 @@
 		72C2B966225EE89800BB8BA2 /* SensorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B965225EE89800BB8BA2 /* SensorVC.swift */; };
 		72C2B968225F166000BB8BA2 /* SensorVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */; };
 		72C2B96A225F2C8900BB8BA2 /* SensorsVC+Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B969225F2C8900BB8BA2 /* SensorsVC+Cells.swift */; };
+		72C2B96D226029E900BB8BA2 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2B96C226029E900BB8BA2 /* WebAPI.swift */; };
 		75DB5D547C53CFC015BF29D7 /* Pods_MonitorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D97F6125DBC46FB3F5064 /* Pods_MonitorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		72C2B965225EE89800BB8BA2 /* SensorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorVC.swift; sourceTree = "<group>"; };
 		72C2B967225F166000BB8BA2 /* SensorVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorVC+Cells.swift"; sourceTree = "<group>"; };
 		72C2B969225F2C8900BB8BA2 /* SensorsVC+Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorsVC+Cells.swift"; sourceTree = "<group>"; };
+		72C2B96C226029E900BB8BA2 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		C2950D2B2CE23034B8F77289 /* Pods-MonitorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonitorApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		72C2B923225C921000BB8BA2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				72C2B96B2260295200BB8BA2 /* Services */,
 				72C2B946225DCFBE00BB8BA2 /* Model */,
 				72C2B925225C92E600BB8BA2 /* Modules */,
 				72C2B924225C923300BB8BA2 /* Main */,
@@ -274,6 +277,14 @@
 			path = Sensor;
 			sourceTree = "<group>";
 		};
+		72C2B96B2260295200BB8BA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				72C2B96C226029E900BB8BA2 /* WebAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		785683D815BA1898A065E1C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,15 +408,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MonitorApp/Pods-MonitorApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IORequestable/IORequestable.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Ono/Ono.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IORequestable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ono.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -456,6 +477,7 @@
 				72C2B952225DD76100BB8BA2 /* SampleProbesData.swift in Sources */,
 				72C2B94C225DD16D00BB8BA2 /* CommonMonitorCell.swift in Sources */,
 				72C2B929225C96B200BB8BA2 /* Module.swift in Sources */,
+				72C2B96D226029E900BB8BA2 /* WebAPI.swift in Sources */,
 				72C2B940225D988B00BB8BA2 /* SideMenuVC+Cells.swift in Sources */,
 				72C2B95C225EE18600BB8BA2 /* DevicesVC.swift in Sources */,
 				72C2B92E225C9FBA00BB8BA2 /* RootModule.swift in Sources */,

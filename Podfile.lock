@@ -1,15 +1,36 @@
 PODS:
+  - Alamofire (4.8.2)
+  - IORequestable (0.1.2):
+    - IORequestable/Core (= 0.1.2)
+  - IORequestable/Core (0.1.2):
+    - Alamofire
+    - Moya (~> 12.0.0)
+    - Result
+    - SwiftyJSON (~> 4.2.0)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
   - Ono (2.1.1)
+  - Result (4.1.0)
   - SideMenu (5.0.3)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - IORequestable
   - Ono
   - SideMenu
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  IORequestable: 650b245ebd2dc0145075cdb01c7f0d8be102e192
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Ono: 13c25831a4a66b30df93bd1fa57cf70f13c62699
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 165b57fd20582f82af8bd9625d849a606a79e469
+PODFILE CHECKSUM: 061602323ef4e5ad1aa7ecd5459a99bc812ba1dd
 
 COCOAPODS: 1.4.0
